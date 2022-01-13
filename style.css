@@ -1,0 +1,34 @@
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+#btn-hero:hover {
+  color: #ffc107;
+  background-color: black;
+}
+
+.fa-check-circle {
+  color: #28a745;
+}
+
+ul li {
+  list-style: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (min-width: 768px) {
+  #btn-hero {
+    font-size: 1.5rem;
+  }
+  .hero {
+    height: 650px;
+  }
+}
+
+.hero {
+  min-height: 250px;
+}
