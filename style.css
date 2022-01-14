@@ -1,7 +1,14 @@
 body {
   font-family: "Poppins", sans-serif;
 }
+.carousel-item img {
+  max-height: 550px;
+}
 
+#carouselExampleDark {
+  min-height: 440px;
+  min-width: none;
+}
 #btn-hero:hover {
   color: #ffc107;
   background-color: black;
