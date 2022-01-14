@@ -18,6 +18,21 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.css"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+      integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      type="text/javascript"
+      charset="utf8"
+      src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.js"
+    ></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -29,7 +44,7 @@
   </head>
   <body>
     <div class="container">
-      <nav class="navbar navbar-expand-lg">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
           <a class="navbar-brand text-muted" href="#">Budiman </a>
           <button
@@ -41,13 +56,13 @@
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon text-warning"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul
               class="navbar-nav me-auto mb-2 mb-lg-0 d-flex ms-auto flex-nowrap"
             >
-              <li class="nav-item ms-auto">
+              <li class="nav-item">
                 <a
                   class="nav-link active text-muted"
                   aria-current="page"
@@ -70,7 +85,6 @@
               <li class="nav-item">
                 <a class="nav-link text-muted" href="#portfolio">Portfolio</a>
               </li>
-              <li class="nav-item"></li>
             </ul>
           </div>
         </div>
@@ -251,33 +265,90 @@
 
     <!-- Portfolio Section -->
     <section class="container">
-      <table id="portfolio" class="table table-striped">
+      <table id="portfolio" class="display">
         <thead>
           <tr>
-            <th scope="col">Number</th>
-            <th scope="col">Company Name</th>
+            <th scope="col">type</th>
+            <th scope="col">Name</th>
             <th scope="col">Description</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <th scope="row">1</th>
-            <td>pt.alumindo light metal industry</td>
+            <td>PT</td>
+            <td>Alumindo light metal industry</td>
             <td>
-              rockwool & ceramic fiber insulation for furnace, pembuatan ducting
-              blower central foil ii., dan insulation for steam pipe + aluminium
-              sheet +bjls
+              rockwool & ceramic fiber, ducting blower central foil dan
+              aluminium sheet
             </td>
           </tr>
           <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
+            <td>PT</td>
+            <td>MEGASURYA MAS</td>
+            <td>rockwool/ glasswool. aluminium foil, dan roofmesh.</td>
           </tr>
           <tr>
-            <th scope="row">3</th>
-            <td>Larry the Bird</td>
-            <td>@twitter</td>
+            <td></td>
+            <td>GALAXY MALL</td>
+            <td>rockwool/ glasswool. aluminium foil, dan roofmesh.g</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>GUESS HOUSE PLTU PAITON</td>
+            <td>rockwool/ glasswool. aluminium foil, dan roofmesh.g</td>
+          </tr>
+          <tr>
+            <td>PT</td>
+            <td>BOC GASES GRESIK</td>
+            <td>rockwool/ glasswool. aluminium foil, dan roofmesh.g</td>
+          </tr>
+          <tr>
+            <td>PT</td>
+            <td>KIMIA FARMA</td>
+            <td>cold insulation : menggunakan glasswool</td>
+          </tr>
+          <tr>
+            <td>PT</td>
+            <td>SASA INTI</td>
+            <td>cold insulation : menggunakan glasswool</td>
+          </tr>
+          <tr>
+            <td>PT</td>
+            <td>SORINI AGRO INDUSTRY CORP</td>
+            <td>
+              hot and cold insulation: menggunakan rockwool dan ceramic fiber
+            </td>
+          </tr>
+          <tr>
+            <td>PT</td>
+            <td>SORINI TOWA BERLIAN CORP</td>
+            <td>
+              hot and cold insulation: menggunakan rockwool dan ceramic fiber
+            </td>
+          </tr>
+          <tr>
+            <td>PT</td>
+            <td>SEMEN GRESIK</td>
+            <td>
+              insulation of id fan menggunakan rockwool dan aluminium sheet
+            </td>
+          </tr>
+          <tr>
+            <td>PT</td>
+            <td>INDOSPRING</td>
+            <td>
+              insulation of id fan menggunakan rockwool dan aluminium sheet
+            </td>
+          </tr>
+          <tr>
+            <td>PT</td>
+            <td>SEMEN GRESIK</td>
+            <td>rockwool insulation for steam boiler and air handling unit</td>
+          </tr>
+          <tr>
+            <td>PT</td>
+            <td>SEMEN GRESIK</td>
+            <td>rockwool insulation for steam boiler and air handling unit</td>
           </tr>
         </tbody>
       </table>
@@ -310,7 +381,12 @@
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
+
     <script>
+      $("#portfolio").DataTable({
+        paging: false,
+        scrollY: 400,
+      });
       const year = document.getElementById("year");
       year.innerHTML = new Date().getFullYear();
     </script>
